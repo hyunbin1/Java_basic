@@ -1,5 +1,5 @@
 
-public class Excange_variable {
+public class Exchange_variable {
 	public static void main(String[] args) {
 		// 두 변수의 값 교환하기
 		int x = 10, y = 20;
