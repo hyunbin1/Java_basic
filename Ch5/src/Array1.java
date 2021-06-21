@@ -27,10 +27,10 @@ public class Array1 {
 //		배열의 모든 요소를 출력하기:
 		System.out.println(Arrays.toString(score));
 //		OR
-	for(int i =0;i<score.length;i++) {
-		System.out.println(score[i]);
-		
-	}
+		for(int i =0;i<score.length;i++) {
+			System.out.println(score[i]);
+			
+		}
 		
 	}
 	
