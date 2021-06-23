@@ -31,9 +31,35 @@
 
 //매서드 만들기
 class MyMath {
-    long add(long a, long b){
+    long add(long a, long b){ // static 없는 것은 인스턴트 매서드라고 한다.
         return a+b;
     }
+
+    static long added(long a, long b){ //static 매서드 혹은 클래스 매서드라고 부른다.
+        return a+b;
+    }
+    /* 인스턴스 매서드
+    1. 인스턴스 생성 후, '참조변수.매서드이름()' 으로 호출
+    2. 인스턴스 멤버(iv(instance variable), im(instance method))와 관련된 작업을 하는 매서드
+    3. 매서드 내에서 인스턴스 변수 사용가능
+    4. 클래스 전체에서 사용할수 있다.
+
+     */
+
+    /* static 매서드(class 매서드) - iv를 사용하면 static 을 붙일 수 없다.
+    1. 객체생성 없이!! '클래스이름.매서드이름()'으로 호출
+    2. 인스턴스 멤버와 관련없는 작업을 하는 매서드
+    3. 매서드 내에서 인스턴스 변수 사용 불가.
+    4. 유효범위: 선언된 위치부터 끝날때 까지.
+     */
+
+
+
+
+
+
+
+
 }
 
 public class Methods {
