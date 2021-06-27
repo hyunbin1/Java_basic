@@ -43,7 +43,6 @@ class MyMath {
     2. 인스턴스 멤버(iv(instance variable), im(instance method))와 관련된 작업을 하는 매서드
     3. 매서드 내에서 인스턴스 변수 사용가능
     4. 클래스 전체에서 사용할수 있다.
-
      */
 
     /* static 매서드(class 매서드) - iv를 사용하면 static 을 붙일 수 없다.
