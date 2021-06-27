@@ -10,16 +10,15 @@ public class Calculator {
         System.out.println("1. add, 2. minus, 3. multiply, 4. divide");
         System.out.println("원하는 번호를 선택하세요.");
         int start = input.nextInt();
-        if(!(start <= 1 && start <= 4)){
+        if (1 > start || start > 4) {
             System.out.println("1~4이내의 값을 입력해주세요.");
-        }else {
-
+        } else {
             System.out.println("첫 번째 번호를 입력하세요");
             Double firstValue = input.nextDouble();
 
             System.out.println("두 번째 번호를 입력하세요");
             Double secondValue = input.nextDouble();
-            if (secondValue <= 0 || !(start <= 1 && start <= 4)) {
+            if (secondValue <= 0) {
                 System.out.println("0 이상의 값을 입력해주세요");
             }
 
