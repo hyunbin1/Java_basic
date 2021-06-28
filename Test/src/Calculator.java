@@ -3,46 +3,53 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args){
 
-        //결과값 선언
-        double result;
+        String[] operators = {"+" , "-", "*", "/"};
 
         Scanner input = new Scanner(System.in);
         System.out.println("1. add, 2. minus, 3. multiply, 4. divide");
         System.out.println("원하는 번호를 선택하세요.");
-        int start = input.nextInt();
-        if (1 > start || start > 4) {
+        int operate = input.nextInt() - 1 ;
+
+        boolean isValid = operators[operate] == "+" || operators[operate] == "-" || operators[operate] == "*" || operators[operate] == "/";
+
+        if (!isValid) {
             System.out.println("1~4이내의 값을 입력해주세요.");
         } else {
             System.out.println("첫 번째 번호를 입력하세요");
-            Double firstValue = input.nextDouble();
+            double firstValue = input.nextDouble();
 
             System.out.println("두 번째 번호를 입력하세요");
-            Double secondValue = input.nextDouble();
+            double secondValue = input.nextDouble();
             if (secondValue <= 0) {
                 System.out.println("0 이상의 값을 입력해주세요");
             }
-
-            switch (start) {
-                case 1 -> {
-                    result = firstValue + secondValue;
-                    System.out.println(firstValue + "+" + secondValue + "=" + result);
-                }
-                case 2 -> {
-                    result = firstValue - secondValue;
-                    System.out.println(firstValue + "-" + secondValue + "=" + result);
-                }
-                case 3 -> {
-                    result = firstValue * secondValue;
-                    System.out.println(firstValue + "*" + secondValue + "=" + result);
-                }
-                case 4 -> {
-                    result = firstValue / secondValue;
-                    System.out.println(firstValue + "/" + secondValue + "=" + result);
-                }
-                default -> System.out.println("1~4이내의 값을 입력해주세요.");
-            }
+            double result = calculate ( operators[operate], firstValue, secondValue);
+            System.out.println(firstValue + operators[operate] + secondValue + "=" + result);
             input.close();
         }
     }
-}
 
+    static double calculate(String operate, double firstValue, double secondValue) {
+        //결과값 선언
+        double result;
+
+        switch (operate) {
+            case "+" -> {
+                result = firstValue + secondValue;
+            }
+            case "-" -> {
+                result = firstValue - secondValue;
+            }
+            case "*" -> {
+                result = firstValue * secondValue;
+            }
+            case "/" -> {
+                result = firstValue / secondValue;
+            }
+            default -> {result = 0;}
+        }
+        return result;
+    }
+
+
+}
