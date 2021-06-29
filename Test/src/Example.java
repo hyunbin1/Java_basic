@@ -48,23 +48,24 @@
 
      }
 }
- class Tv {
-     String color;
-     boolean power;
-     int channel;
-
-     void power() {
-         power = !power;
-     }
-
-     void channelUp() {
-         ++channel;
-     }
-
-     void channelDown() {
-         --channel;
-     }
- }
+// class Tv {
+//     String color;
+//     boolean power;
+//     int channel;
+//
+//     void power() {
+//         power = !power;
+//     }
+//
+//     void channelUp() {
+//         ++channel;
+//     }
+//
+//     void channelDown() {
+//         --channel;
+//     }
+// }
+//
  class Card{
      String kind; // 무늬
      int number; // 숫자
