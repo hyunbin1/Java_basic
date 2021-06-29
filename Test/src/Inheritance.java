@@ -54,6 +54,12 @@ class Circle2 { // Point클래스를 Circle에 포함시킨 포함관계이다.
     int r;//반지름
 }
 
+/* Object 클래스: 모든 클래스의 조상이다.
+조상이 없는 클래스는 자동적으로 Object클래스를 상속받는다.
+그렇기 때문에 모든 클래스는 Object클래스에 정의된 11개의 메서드를 상속받는다.
+ex] toString(), equals(Object obj), hashCode(), ...
+*/
+
 
 
 
